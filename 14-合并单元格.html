@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-合并单元格</title>
+</head>
+<body>
+    <table border="1" cellpadding="30" cellspacing="0" width="300" hight="180">
+        <tr>
+            <td>1-1</td>
+            <!-- 第一行的2、3列合并,写在左侧第二列,第三列不需要写,属于跨列合并 -->
+            <td colspan="2">1-2</td>
+        </tr>
+        <tr>
+            <!-- 第二行第一列和第三行第一列合并,写在最上侧单元格,第三行第一列不需要写出来,属于跨行合并 -->
+            <td rowspan="2">2-1</td>
+            <td>2-2</td>
+            <td>2-3</td>
+        </tr>
+        <tr>
+            <td>3-2</td>
+            <td>3-3</td>
+        </tr>
+    </table>
+</body>
+</html>
