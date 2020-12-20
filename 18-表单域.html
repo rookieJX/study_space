@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-表单域</title>
+</head>
+<body>
+    <h4>18-表单域</h4>
+    <form action="demo.php" method="POST" name="first_name">
+
+    </form>
+
+    <h4>input 表单元素</h4>
+    <form action="demo.php" method="POST" name="second_name">
+        <!-- text 文本框 用户可以在里面输入任何文字 -->
+        用户名: <input type="text"name="user_name" value="请输入用户名"/> <br />
+        <!-- password 密码,会掩码代替用户密码 -->
+        密码: <input type="password" name="user_password" /> <br />
+        <!-- radio是单选按钮, 可以实现单选一 -->
+        <!-- name 是表单元素的名字 这里性别单选按钮必须有相同的名字name 才可以实现多选 -->
+        <!-- 单选框和复选框可以设置checked属性,当页面打开的时候就可以默认选中这个按钮 -->
+        性别: <input type="radio" name="sex" checked="checked" value="男">男 <input type="radio" name="sex" value="女">女 <br />
+        <!-- checkbox是多选按钮,可以实现多选 -->
+        爱好: <input type="checkbox" name="hobby" />吃饭 <input type="checkbox" name="hobby" />睡觉 <input type="checkbox" name="hobby" />打豆豆 <br />
+
+        <!-- 点击提交就可以把表单域 from里面的表单元素里面的值提交给后台服务器 -->
+        提交: <input type="submit" value="免费注册"/> <br />
+
+        <!-- 表单元素可以还原表单元素的初始的默认状态 -->
+        重置: <input type="reset"/> <br />
+
+        <!-- 普通按钮 后期结合JS搭配使用 -->
+        普通按钮: <input type="button" value="获取短信验证码"/> <br />
+
+        <!-- 文件上传 -->
+        文件上传: <input type="file" />
+
+    </form>
+
+    <h4>label 标签</h4>
+    <form name="second_name">
+        <label for="user_name">姓名</label>
+    <input type="text" name="user_name" id="user_name"> <br />
+
+    <input type="radio" name="sex" id="sex_man"/>
+    <label for="sex_man"><img src="src/01.png" width="30" height="30"></label>
+    <label for="sex_man">男</label>
+
+    <input type="radio" name="sex" id="sex_woman"/>
+    <label for="sex_woman"><img src="src/01.png" width="30" height="30"></label>
+    <label for="sex_woman">女</label>
+    </form>
+
+    <h4>select标签</h4>
+    <form name="third_name">
+        籍贯:<select>
+            <option>山东</option>
+            <option>上海</option>
+            <option>北京</option>
+            <option selected="selected">河南</option>
+            <option>河北</option>
+        </select>
+    </form>
+
+    <h4>textarea文本域标签</h4>
+    <form name="four_name">
+        今日反馈: <textarea rows="3" cols="10">这是啥啊</textarea>
+    </form>
+    
+</body>
+</html>

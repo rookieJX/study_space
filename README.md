@@ -503,3 +503,74 @@ HTML页面也称为HTML文档。
 | action | url地址 | 用于指定接收并处理表单数据的服务器程序的url地址 |
 | method | get/post | 用于设置表单数据的提交方式,其取值为get或post |
 | name | 名称 | 用于指定表单的名称,以区分同一个页面中的多个表单域 |
+
+3. `<input />`输入表单元素
+
+```html
+<input type="属性值" />
+```
+| 属性值 | 描述 |
+| -- | -- |
+| button | 定义可点击按钮(多数情况下,用于通过JavaScript启动脚本) | 
+| checkbox | 定义复选框 |
+| file | 定义输入字段和"浏览"按钮,供文件上传 |
+| hidden | 定义隐藏的输入字段 |
+| image | 定义图像形式的提交按钮 |
+| password | 定义密码字段。该字段中的字符被掩码 |
+| radio | 定义单选按钮 |
+| reset | 定义重置按钮。重置按钮会清除表单中的所有数据 |
+| submit | 定义提交按钮。提交按钮会把表单数据发送到服务器 |
+| text | 定义单行的输入字段,用户可在其中输入文本。默认宽度为20个字符 |
+
+
+| 属性 | 属性值 | 描述 |
+| --- | --- | --- |
+| name | 由用户自定义 | 定义input元素的名称 |
+| value | 由用户自定义 | 规定input元素的值 |
+| checked | checked | 规定此input元素首次加载时应当被选中 |
+| maxlength | 正整数 | 规定输入字段中的字符的最大长度 |
+
+- `name` 和 `value` 是每个表单元素都有的属性值,主要给后台人员使用
+
+- `name`表单元素的名字,要求`单选按钮和复选框要有相同的name值`
+
+
+4. `<label></lable>`标签
+
+此标签为标注标签。`<label></label>`标签用于绑定一个表单元素,当点击`<label></label>`标签内的文本时,浏览器就会自动将焦点(光标)转到或者选择对应的表单元素上,用来增加用户体验。
+
+```html
+<label for="sex">男</label>
+<input type="radio" name="sex" id="sex" />
+```
+
+- `<label?></label>` 标签中的 `for` 属性必须与相关元素的 `id` 属性相同。
+
+5. `<select>`下拉表单元素
+
+```html
+<select>
+  <option>选项1</option>
+  <option>选项2</option>
+  <option>选项3</option>
+  <option>选项4</option>
+</select>
+```
+
+- `<select></select>`中至少包含一对`<option></option>`
+
+- 在 `<option></option>`中定义 `selected="selected"`时,当前项即为默认选中项目
+
+
+6. `<textarea></textarea>`文本域元素
+
+当用户输入内容较多的情况下可以使用此标签
+
+```html
+<textarea rows="3" cols="10">
+  内容
+</textarea>
+```
+
+- `cols` = 每行中的字符数, `rows` = 显示的行数。 一般在开发中使用css来改变大小。
+
