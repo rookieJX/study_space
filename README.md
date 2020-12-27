@@ -858,4 +858,118 @@ p {
 
 字体复合属性可以把以上文字样式综合起来写,这样可以节约代码
 
+- 使用 `font` 属性时,必须按语法格式中的顺序书写,不能更换顺序,并且各个属性间以空格隔开
 
+- 不需要设置的属性可以省略(取默认值),但是必须保留 `font-size` 和 `font-family` 属性,否则font将不起作用
+
+```html
+body {
+  font: font-style font-weight font-size/line-height font-family;
+}
+```
+
+
+### 3.6 字体属性总结
+
+| 属性 | 表示  | 注意点 |
+| --- | --- | --- |
+| `font-size` | 字号 | 我们通常用px单位,最后一定要跟上单位 |
+| `font-family` | 字体 | 按照约定字体设置 |
+| `font-weight` | 字体粗细 | 加粗的是700或者bold,不加粗是normal或者400,这个没有单位 |
+| `font-style` | 字体样式 | 斜体是 `italic` 不倾斜, `normal` 是正常样式 |
+| `font` | 字体连写 | 连写是有顺序的`font-style font-weight font-size/line-height font-family`, 其中字号和字体必须同时出现 |
+
+
+# 4. CSS文本属性
+
+CSS文本属性可以定义文本的外观,比如文本的颜色、对其文本、装饰文本、文本缩进、行间距等。
+
+### 4.1 文本颜色
+
+`color`属性用于定义文本的颜色
+
+```html
+div {
+  color: red;
+}
+```
+
+| 表示 | 属性值 |
+| --- | --- |
+| 预定义的颜色值 | `red`、`green`等 |
+| 十六进制 | `#FF0000`、`#FF6600` |
+| RGB代码 | `rgb(255,0,0)` |
+
+### 4.2 对齐文本
+
+`text-align`属性用于设置元素内文本内容的水平对齐方式
+
+```html
+div {
+  text-align: center;
+}
+```
+
+| 属性值 | 解释 |
+| --- | --- |
+| `left` | 左对齐 |
+| `right` | 右对齐 |
+| `center` | 居中对齐 |
+
+
+### 4.3 装饰文本
+
+`text-decoration` 属性规定添加到文本的装饰。可以给文本添加下划线、删除线、上划线等。
+
+```html
+div {
+  text-decoration: underline;
+}
+```
+
+| 属性值 | 描述 |
+| --- | --- |
+| `none` | 默认。没有装饰线。|
+| `underline` | 下划线。链接a自带下划线。 |
+| `overline` | 上划线。 |
+| `line-through` | 删除线 |
+
+### 4.4 文本缩进
+
+`text-indent` 属性用来指定文本的第一行的缩进,通常是将段落的首行缩进。
+
+```html
+div {
+  text-indent: 10px;
+}
+```
+
+通过设置这个属性,所有元素的第一行都可以缩进一个给定的长度,甚至该长度可以是负值。
+
+```html
+p {
+  text-indent: 2em;
+}
+```
+
+`em`是一个相对单位,就是当前元素(`font-size`) 1个文字的大小,如果当前元素没有设置大小,则会按照父元素的1个文字大小
+
+### 4.5 行间距
+
+`line-height` 属性用于设置行间的距离(行高)。可以控制文字行与行之间的距离。
+
+```html
+p {
+  line-height: 26px;
+}
+```
+
+### 4.6 文本属性总结
+
+| 属性 | 表示 | 注意点 |
+| --- | --- | --- |
+| `color` | 文本颜色 | 一般十六进制写的比较多 |
+| `text-align` | 对齐方式 | 水平方向上的对齐方式 |
+| `text-decoration` | 文本修饰 | 下划线 `underline` 上划线 `overline` 中间 `line-through` 取消下划线 `none` |
+| `text-indent` | 文本缩进 | 一般使用 `em` 是一个文字的大小(`font-size`) |
+| `line-height` | 行高 | 控制行与行之间的距离 |
